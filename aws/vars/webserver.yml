@@ -3,7 +3,7 @@ cpu_architecture: amd64
 linux_distribution: ubuntu
 ubuntu_release: trusty
 virutalization_type: hvm
-web_instance_type: t2.micro
+web_instance_type: t2.small
 web_security_groups:
 - sg_description: This sg is for app instance
   sg_name: web-sg
@@ -13,6 +13,6 @@ web_security_groups:
     proto: tcp
     to_port: 22
   - cidr_ip: 0.0.0.0/0
-    from_port: 80
+    from_port: 8080
     proto: tcp
-    to_port: 80
+    to_port: 8080
