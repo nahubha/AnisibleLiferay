@@ -38,7 +38,8 @@
      group: "{{ web_security_groups[0].sg_name }}"
      keypair: "{{ key_name }}"
      instance_type: "{{ web_instance_type }}"
-     image: "{{ imgae_id.ami }}"
+     #image: "{{ imgae_id.ami }}"
+     image: ami-b63769a1
      vpc_subnet_id: "{{ item }}"
      assign_public_ip: True
      wait: True
@@ -47,12 +48,11 @@
                #!/bin/sh
                sudo apt-get update -y
                sudo apt-get install nginx -y
-               
-     instance_tags:
-       Name: "{{ vpc_name }}_WEB_Instance"
-       Environment: "{{ ENV }}"
-       Role: "{{ server_role }}"
-       Application: "{{ application }}"
+     #instance_tags:
+       #Name: "{{ vpc_name }}_WEB_Instance"
+       #Environment: "{{ ENV }}"
+       #Role: "{{ server_role }}"
+       #Application: "{{ application }}"
    with_items:
       - "{{ public_subnet_1 }}"
       - "{{ public_subnet_2 }}"
