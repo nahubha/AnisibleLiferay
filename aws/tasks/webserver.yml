@@ -92,7 +92,17 @@
    local_action: 
      module: wait_for 
      host: "{{ item }}" 
-     port: 22 
+     port: 22
+     state: started
+   with_items: 
+     - "{{ instance_public_ip_1 }}"
+     - "{{ instance_public_ip_2 }}" 
+     
+  - name: LiferayServer | Wait for 8080 to come up
+   local_action: 
+     module: wait_for 
+     host: "{{ item }}" 
+     port: 8080 
      state: started
    with_items: 
      - "{{ instance_public_ip_1 }}"
