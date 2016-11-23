@@ -3,7 +3,6 @@
    connection: local
    gather_facts: no
    vars_files:
-     - aws/vars/tags.yml	
      - aws/vars/vpc.yml
      - aws/vars/ec2_key.yml
      - aws/vars/webserver.yml
