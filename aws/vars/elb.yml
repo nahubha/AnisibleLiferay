@@ -20,6 +20,6 @@ sg_description: This sg is for {{ load_balancer_name }}
 sg_name: '{{ load_balancer_name }}-sg'
 sg_rules:
 - cidr_ip: 0.0.0.0/0
-  from_port: 8080
+  from_port: 80
   proto: tcp
-  to_port: 8080
+  to_port: 80
