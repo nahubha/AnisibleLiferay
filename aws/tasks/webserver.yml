@@ -54,8 +54,9 @@
                source ~/.bashrc 
                wget  https://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.2.2%20GA3/liferay-portal-doc-6.2-ce-ga3-20150121124737370.zip >>user-data.log
                wget --no-cookies --no-check-certificate --header "Cookie:gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91-linux-x64.tar.gz"
-               unzip liferay-portal-doc-6.2-ce-ga3-20150121124737370.zip >>user-data.log
-               sh /liferay/tomcat-7.0.62/bin/startup.sh >>user-data.log
+               unzip liferay-portal-doc-6.2-ce-ga3-20150121124737370.zip 
+               tar xzf jdk-8u91-linux-x64.tar.gz
+               sh /liferay-portal-doc-6.2-ce-ga3/tomcat-7.0.62/bin/startup.sh
                
      #instance_tags:
        #Name: "{{ vpc_name }}_WEB_Instance"
