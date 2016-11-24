@@ -32,10 +32,10 @@
    register: imgae_id
  
  - name: WebServer | Create the WebServer Instance(s)
-   become: yes
-   become_user: ec2-user
+   #become: yes
+   #become_user: ec2-user
    local_action:
-     become: yes
+     #become: yes
      #become_method: sudo
      module: ec2
      region: "{{ vpc_region }}"
