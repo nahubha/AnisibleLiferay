@@ -55,7 +55,7 @@
                unzip liferay-ce-portal-tomcat-7.0-ga3-20160804222206210.zip 
                tar -xzvf jdk-8u91-linux-x64.tar.gz
                source ~/.bashrc 
-               sh /liferay-ce-portal-7.0-ga3/tomcat-7.0.62/bin/startup.sh
+               sh /liferay-ce-portal-7.0-ga3/tomcat-8.0.32/bin/startup.sh
                
      #instance_tags:
        #Name: "{{ vpc_name }}_WEB_Instance"
