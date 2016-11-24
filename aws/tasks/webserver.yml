@@ -43,7 +43,7 @@
      vpc_subnet_id: "{{ item }}"
      assign_public_ip: True
      wait: True
-     wait_timeout: 10000
+     wait_timeout: 8000
      user_data: |
                #!/bin/sh
                yum install wget unzip -y
