@@ -50,7 +50,7 @@
                echo "export JAVA_HOME=/jdk1.8.0_91" >> ~/.bashrc
                echo "export JRE_HOME=/jdk1.8.0_91/jre" >> ~/.bashrc
                echo "export PATH=$PATH:/jdk1.8.0_91/bin:/jdk1.8.0_91/jre/bin" >> ~/.bashrc
-               wget  https://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.2.2%20GA3/liferay-portal-doc-6.2-ce-ga3-20150121124737370.zip >>user-data.log
+               http://liquidtelecom.dl.sourceforge.net/project/lportal/Liferay%20Portal/7.0.2%20GA3/liferay-ce-portal-tomcat-7.0-ga3-20160804222206210.zip
                wget --no-cookies --no-check-certificate --header "Cookie:gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91-linux-x64.tar.gz"
                unzip liferay-portal-doc-6.2-ce-ga3-20150121124737370.zip 
                tar -xzvf jdk-8u91-linux-x64.tar.gz
