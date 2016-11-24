@@ -101,6 +101,7 @@
      host: "{{ item }}" 
      port: 8080 
      state: started
+     timeout: 3000
    with_items: 
      - "{{ instance_public_ip_1 }}"
      - "{{ instance_public_ip_2 }}" 
