@@ -4,6 +4,9 @@ linux_distribution: ubuntu
 ubuntu_release: trusty
 virutalization_type: hvm
 web_instance_type: t2.small
+ENV: Dev
+server_role: root
+application: liferay
 web_security_groups:
 - sg_description: This sg is for app instance
   sg_name: web-sg
