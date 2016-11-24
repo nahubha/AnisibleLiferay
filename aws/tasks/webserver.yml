@@ -62,11 +62,11 @@
                source ~/.bashrc 
                sh ~/liferay-ce-portal-7.0-ga3/tomcat-8.0.32/bin/startup.sh
                
-     #instance_tags:
-       #Name: "{{ vpc_name }}_WEB_Instance"
-       #Environment: "{{ ENV }}"
-       #Role: "{{ server_role }}"
-       #Application: "{{ application }}"
+     instance_tags:
+       Name: "{{ vpc_name }}_WEB_Instance"
+       Environment: "{{ ENV }}"
+       Role: "{{ server_role }}"
+       Application: "{{ application }}"
    with_items:
       - "{{ public_subnet_1 }}"
       - "{{ public_subnet_2 }}"
