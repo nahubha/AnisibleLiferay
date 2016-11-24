@@ -36,7 +36,7 @@
    become_user: ec2-user
    local_action:
      become: yes
-     become_method: sudo
+     #become_method: sudo
      module: ec2
      region: "{{ vpc_region }}"
      group: "{{ web_security_groups[0].sg_name }}"
