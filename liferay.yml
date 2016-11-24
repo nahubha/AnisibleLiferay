@@ -1,6 +1,6 @@
 ---
  - hosts: localhost
-   sudo: True
+   sudo: true
    remote_user: ec2-user
    connection: local
    gather_facts: no
