@@ -46,8 +46,8 @@
      wait_timeout: 720
      user_data: |
                #!/bin/sh
-               yum install wget unzip -y >>user-data.log |wget --no-cookies --no-check-certificate --header "Cookie:gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91-linux-x64.tar.gz" >>user-data.log | sleep 100
-               tar xzf jdk-8u91-linux-x64.tar.gz >>user-data.log
+               yum install wget unzip -y >>user-data.log |sleep 100 |wget --no-cookies --no-check-certificate --header "Cookie:gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91-linux-x64.tar.gz" >>user-data.log | sleep 100
+               tar xzf jdk-8u91-linux-x64.tar.gz >>user-data.log | sleep 100
                echo "export JAVA_HOME=/jdk1.8.0_91" >> ~/.bashrc
                echo "export JRE_HOME=/jdk1.8.0_91/jre" >> ~/.bashrc
                echo "export PATH=$PATH:/jdk1.8.0_91/bin:/jdk1.8.0_91/jre/bin" >> ~/.bashrc
