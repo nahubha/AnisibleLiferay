@@ -1,5 +1,5 @@
 ---
  - name: register output after creating zone in parameterized region
-          route53_zone:
-            zone: nahubha.com
-            state: present           
+   route53_zone:
+     zone: nahubha.com
+     state: present           
