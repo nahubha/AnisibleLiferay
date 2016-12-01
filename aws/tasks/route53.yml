@@ -1,11 +1,18 @@
 ---
-
- - name: Update Route53 Record for WWWW
-   route53:
-     command: create
-     overwrite: yes
-     zone: "{{ domain }}"
-     record: "www.{{ domain }}"
-     type: CNAME
-     ttl: 60
-     value: "{{ web_elb.elb.dns_name }}"
+- hosts: localhost  
+  connection: local  
+  gather_facts: no   
+  tasks:
+         - name: Update Route53 Record for WWWW
+           route53:
+             command: create
+             overwrite: yes
+             zone: "nahubha.com"
+             record: "www.nahubha.com"
+             hosted_zone_id: "Z1OWNZWZ8BWOOJ"
+             alias_hosted_zone_id: "Z35SXDOTRQ7X7K"
+             retry_interval: 5000
+             alias: true
+             type: A
+             ttl: 60
+             value: "Nagesh-Dev-root-ELB-2139596356.us-east-1.elb.amazonaws.com"
