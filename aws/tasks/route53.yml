@@ -7,8 +7,8 @@
            route53:
              command: create
              overwrite: yes
-             zone: "nahubha.com"
-             record: "www.nahubha.com"
+             zone: "{{ domain }}"
+             record: "www.{{ domain }}"
              hosted_zone_id: "{{  id_of_zone.zone_id }}"
              alias_hosted_zone_id: "{{  id_of_zone.zone_id }}"
              retry_interval: 5000
