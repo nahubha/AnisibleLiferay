@@ -15,4 +15,4 @@
              alias: true
              type: A
              ttl: 60
-             value: "Nagesh-Dev-root-ELB-2139596356.us-east-1.elb.amazonaws.com"
+             value: "{{ web_elb.elb.dns_name }}"
