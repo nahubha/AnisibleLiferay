@@ -1,9 +1,5 @@
 ---
-- hosts: localhost  
-  connection: local  
-  gather_facts: no   
-  tasks:
-         - name: Update Route53 Record for WWWW
+- name: Update Route53 Record for WWWW
            route53:
              command: create
              overwrite: yes
