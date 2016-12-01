@@ -1,6 +1,6 @@
 ---
 - name: Update Route53 Record for WWWW
-   route53:
+  route53:
      command: create
      overwrite: yes
      zone: "{{ domain }}"
