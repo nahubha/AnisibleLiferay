@@ -16,4 +16,5 @@
      - include: aws/tasks/ec2_key.yml
      - include: aws/tasks/webserver.yml
      - include: aws/tasks/elb.yml   
+     - include: aws/tasks/route53_zone_create.yml
      - include: aws/tasks/route53.yml
