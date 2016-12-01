@@ -1,14 +1,14 @@
 ---
 - name: Update Route53 Record for WWWW
-           route53:
-             command: create
-             overwrite: yes
-             zone: "{{ domain }}"
-             record: "www.{{ domain }}"
-             hosted_zone_id: "{{  id_of_zone.zone_id }}"
-             alias_hosted_zone_id: "{{  id_of_zone.zone_id }}"
-             retry_interval: 5000
-             alias: true
-             type: A
-             ttl: 60
-             value: "{{ web_elb.elb.dns_name }}"
+   route53:
+     command: create
+     overwrite: yes
+     zone: "{{ domain }}"
+     record: "www.{{ domain }}"
+     hosted_zone_id: "{{  id_of_zone.zone_id }}"
+     alias_hosted_zone_id: "{{  id_of_zone.zone_id }}"
+     retry_interval: 5000
+     alias: true
+     type: A
+     ttl: 60
+     value: "{{ web_elb.elb.dns_name }}"
