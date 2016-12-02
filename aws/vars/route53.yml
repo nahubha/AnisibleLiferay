@@ -1,1 +1,3 @@
 domain: nahubha.com
+alias_hosted_zone_id: "{{ web_elb.elb_zone_id }}"
+value: "{{ web_elb.elb.dns_name }}"
