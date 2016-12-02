@@ -3,4 +3,4 @@
    route53_zone:
      zone: nahubha.com
      state: present           
-     register: id_of_zone
+    register: id_of_zone
