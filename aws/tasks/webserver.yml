@@ -58,7 +58,7 @@
                wget http://liquidtelecom.dl.sourceforge.net/project/lportal/Liferay%20Portal/7.0.2%20GA3/liferay-ce-portal-tomcat-7.0-ga3-20160804222206210.zip
                wget --no-cookies --no-check-certificate --header "Cookie:gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz"
                unzip liferay-ce-portal-tomcat-7.0-ga3-20160804222206210.zip 
-               tar -xzvf jdk-8u91-linux-x64.tar.gz
+               tar -xzvf jdk-7u79-linux-x64.tar.gz
                source ~/.bashrc 
                sh ~/liferay-ce-portal-7.0-ga3/tomcat-8.0.32/bin/startup.sh
                
