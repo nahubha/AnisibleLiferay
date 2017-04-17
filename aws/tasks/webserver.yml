@@ -51,9 +51,10 @@
      user_data: |
                #!/bin/sh
                sudo yum install wget unzip -y
-               echo "export JAVA_HOME=~/jdk1.7.0_79" >> ~/.bashrc
-               echo "export JRE_HOME=~/jdk1.7.0_79/jre" >> ~/.bashrc
-               echo "export PATH=$PATH:~/jdk1.7.0_79/bin:/jdk1.7.0_79/jre/bin" >> ~/.bashrc
+               echo "export JAVA_HOME=~/jdk1.8.0_112" >> ~/.bashrc
+               echo "export JRE_HOME=~/jdk1.8.0_112/jre" >> ~/.bashrc
+               echo "GROOVY_HOME=/var/lib/jenkins/groovy-2.4.10" >> ~/.bashrc
+               echo "export PATH=$PATH:~/jdk1.8.0_112/bin:~/jdk1.8.0_112/jre/bin:/var/lib/jenkins/groovy-2.4.10/bin" >> ~/.bashrc
                cd ~
                wget http://liquidtelecom.dl.sourceforge.net/project/lportal/Liferay%20Portal/7.0.2%20GA3/liferay-ce-portal-tomcat-7.0-ga3-20160804222206210.zip
                wget --no-cookies --no-check-certificate --header "Cookie:gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz"
@@ -61,7 +62,10 @@
                tar -xzvf jdk-7u79-linux-x64.tar.gz
                source ~/.bashrc 
                sh ~/liferay-ce-portal-7.0-ga3/tomcat-8.0.32/bin/startup.sh
-               
+               wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jdk-8u112-linux-x64.tar.gz
+               tar xvzf jdk-8u112-linux-x64.tar.gz -C ~/
+               wget https://bintray.com/artifact/download/groovy/maven/apache-groovy-binary-2.4.10.zip
+               unzip apache-groovy-binary-2.4.10.zip -d ~/
      instance_tags:
        Name: "{{ vpc_name }}_WEB_Instance"
        Environment: "{{ ENV }}"
